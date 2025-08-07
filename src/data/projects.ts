@@ -1,0 +1,227 @@
+import { Project } from '@/types/project';
+
+const projects: Project[] = [
+  {
+    kind: 'programming',
+    slug: 'kiyokayone',
+    title: 'ポートフォリオサイト「Kiyoka Yone」',
+    description:
+      '自身のスキルや制作物を紹介するためのポートフォリオサイトを作成しました。',
+    details: [
+      '主流のNext.js App Routerを使用した構成',
+      'コンポーネント設計を意識して再利用性の高い構成を実現',
+      'TypeScriptを用いた型安全な開発',
+    ],
+    achievements: [
+      'Next.js App Routerの導入により、柔軟なルーティングとメタデータ管理を実現',
+      'SEOを意識したページ構成・メタデータ設計',
+      'Tailwind CSSによる迅速かつ一貫性のあるスタイリング',
+    ],
+    technologies: {
+      languages: ['React', 'Next.js', 'TypeScript'],
+      libraries: ['Tailwind CSS'],
+    },
+    image: '/images/kiyokayone.png',
+    site: 'https://kiyokayone.com/',
+  },
+  {
+    kind: 'programming',
+    slug: 'anatomy',
+    title: 'SEO分析ツール「ANATOMY」',
+    description: 'フロントエンド開発を担当しました。',
+    details: [
+      'Figma・PowerPointのデザイン資料をもとに画面を実装',
+      'WebAPIからデータを取得・加工し、画面に動的表示',
+      'eChartsを用いてグラフによる視覚的なデータ可視化',
+      'dnd-kitライブラリを使用したドラッグ＆ドロップ機能の実装',
+    ],
+    achievements: [
+      'useMemoを活用して再計算を最小限に抑制し、パフォーマンスを向上',
+      'useCallbackで不要な再レンダリングを防止',
+      'dnd-kitで柔軟なD&D機能を実装しUX向上',
+    ],
+    technologies: {
+      languages: ['React', 'TypeScript', 'JavaScript'],
+      libraries: ['eCharts', 'dnd-kit'],
+    },
+    image: '/images/anatomy.png',
+    site: 'https://siteanatomy.com/',
+  },
+  {
+    kind: 'programming',
+    slug: 'andgate',
+    title: 'プロジェクト管理ツール「ANDGATE」',
+    description: 'フロントエンド開発を担当しました。',
+    details: [
+      'デザイン資料をもとに各画面機能を実装',
+      'Material UI を使用したUI開発（プログレスバー、レフトナビ等）',
+      'Auth0 を用いたログイン／認証処理の実装',
+      'JWTトークンによるAPI通信処理の構築',
+      'Backlog API を用いた課題データの取得・登録・削除処理',
+      'Google Calendar（GCP）との連携機能の実装',
+    ],
+    achievements: [
+      '認証とAPI通信においてセキュアかつ簡潔な実装構成を設計',
+      'Material UIのコンポーネントを再利用し、保守性と拡張性を向上',
+      '非同期処理や外部APIのエラーハンドリングを丁寧に設計しUXを向上',
+    ],
+    technologies: {
+      languages: ['React', 'TypeScript', 'JavaScript'],
+      libraries: [
+        'material-ui',
+        'auth0',
+        'jwt',
+        'backlog-api',
+        'google-calendar-api',
+      ],
+    },
+    image: '/images/andgate.png',
+    site: 'https://app.andgate.jp/',
+  },
+  {
+    kind: 'programming',
+    slug: 'koujyoshigoto',
+    title: '求人情報サイト「工場仕事.com」',
+    description: 'WebデザインおよびWordPress開発を担当しました。',
+    details: [
+      'Figmaを用いて全27ページ（トップページ＋下層ページ）のWebデザインを作成',
+      'Avadaテーマを用いたWordPressサイトの設計・カスタマイズ',
+      'HTML/CSS、JavaScript、PHPを用いたプログラムコーディング',
+      'PostSnippetsプラグインを活用し、動的な処理ロジックを実装',
+      'Indeedからの応募情報を取得・処理し、Contact Form 7に連携',
+      '応募元（Indeedまたは自社サイト）に応じて、メール内容やDB反映処理を切り分けるロジックを実装',
+    ],
+    achievements: [
+      'FigmaとWordPressテーマの連携による効率的なデザイン・実装フローを確立',
+      'PostSnippetsを使った柔軟な動的処理でメンテナンス性と拡張性を向上',
+      '応募経路に応じた処理の自動化で管理業務を効率化',
+      'プロジェクト進行中はチームのスケジュールを管理し、スムーズな納品を実現',
+    ],
+    technologies: {
+      languages: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
+      libraries: ['Avadaテーマ', 'PostSnippets', 'Contact Form 7'],
+    },
+    image: '/images/koujoushigoto.png',
+    site: 'https://koujyoshigoto.com/',
+  },
+  {
+    kind: 'programming',
+    slug: 'darwinpro',
+    title: '不動産投資用Webサイト「Darwin Pro」',
+    description: 'デザインおよびWordPress開発を担当しました。',
+    details: [
+      '顧客からのヒアリング内容をもとにサイト構成と要件を整理',
+      'Adobe XDを使用して全約10ページのWebデザインを作成',
+      'Avadaテーマを用いたWordPressサイトの設計・カスタマイズ',
+      'HTML/CSS、JavaScript、PHPを用いたコーディング',
+      'PostSnippetsプラグインを用いて、動的処理の実装',
+      'クライアント向けの操作マニュアルを作成し、納品後の運用を支援',
+    ],
+    achievements: [
+      'ヒアリングからデザイン・実装・納品まで一貫して対応',
+      'Adobe XDとWordPressテーマの連携によりデザイン意図を正確に実装',
+      'ユーザー向けマニュアルの整備により、納品後の運用負荷を軽減',
+    ],
+    technologies: {
+      languages: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
+      libraries: ['Avadaテーマ', 'PostSnippets', 'Contact Form 7'],
+    },
+    image: '/images/darwinpro.png',
+    site: 'https://xd.adobe.com/view/638bc8ab-b480-4c3b-9f7a-5369a87e1e55-36d8/',
+  },
+  {
+    kind: 'design',
+    slug: 'peacedesignerfes',
+    title: 'イベントサイト「Peace designer Fes」',
+    description: 'イベントサイトのwebデザインを担当しました。',
+    details: [
+      'Peace designer Fesのブランドコンセプトに沿ったデザインを制作',
+      'Adobe XDを使用してトップページ、各イベントページ、問い合わせページなどの画面設計を実施',
+      'ターゲットユーザーに親しみやすい配色・レイアウトを意識したUI設計',
+      'スマートフォン・タブレット対応を想定したレスポンシブデザインを考慮',
+    ],
+    achievements: [
+      '構成・導線設計から画面デザインまで一貫して対応',
+      'ブランドイメージとイベントの趣旨を両立したデザインを実現',
+      'Adobe XDで開発者と連携しやすいプロトタイプを作成',
+      '短納期の中でも複数画面のデザインを高品質で納品',
+    ],
+    technologies: {
+      languages: ['Adobe XD'],
+      libraries: [],
+    },
+    image: '/images/peacedesignerfes.png',
+    site: 'https://xd.adobe.com/view/0987d33d-aa49-4d64-9971-7c193d2634b7-5cd4/',
+  },
+  {
+    kind: 'design',
+    slug: 'ngo-webdesign',
+    title: 'NGO団体公式サイト',
+    description: 'webデザインを担当しました。',
+    details: [
+      '団体の理念や活動内容が伝わる構成を設計',
+      '団体のモチーフである「パズル」をデザインに反映し、視覚的に印象づけ',
+      'トップページや活動紹介ページなど複数ページをデザイン',
+      'スマートフォンなど各デバイスでの表示も意識したレスポンシブデザイン',
+      'Adobe XDを用いて開発者と連携しやすいプロトタイプを作成',
+    ],
+    achievements: [
+      'パズルモチーフを用いたシンボリックなビジュアルで団体の個性を表現',
+      '団体のイメージやトーンに沿った配色とレイアウトで信頼感を演出',
+      '情報の整理と視認性を意識した構成で、ユーザーの理解を促進',
+      'Adobe XDのプロトタイプ共有機能により、開発者との円滑な連携を実現',
+    ],
+    technologies: {
+      languages: ['Adobe XD'],
+      libraries: [],
+    },
+    image: '/images/ngo.png',
+    site: 'https://xd.adobe.com/view/f571dcb3-dae1-49fe-b47d-348f2bd603a0-a022/',
+  },
+  {
+    kind: 'design',
+    slug: 'tasukaru',
+    title: '賃貸経営オーナー向けサイト「TASUKARU」',
+    description: 'WebデザインおよびWordPress構築を担当しました。',
+    details: [
+      '既存のWordPressテーマをベースに、UI・UXを意識したデザインを構築',
+      'ターゲット（賃貸経営オーナー）のニーズに沿ったページ構成とデザイン調整',
+      'テーマのデザイン設定・レイアウト調整を通して視認性と導線を最適化',
+      '会社ブランドのイメージに沿ったトーンと配色で統一感を持たせたデザインを実現',
+    ],
+    achievements: [
+      '既存テーマを活かしつつ、ブランドイメージに沿ったデザインで信頼感を向上',
+      '柔軟なテーマカスタマイズにより、短期間で高品質なデザインを実現',
+    ],
+    technologies: {
+      languages: ['HTML', 'CSS', 'WordPress'],
+      libraries: [],
+    },
+    image: '/images/tasukaru.png',
+    site: 'https://tasukaru.jp/',
+  },
+  {
+    kind: 'design',
+    slug: 'jinmyaku',
+    title: '会議議事録Webサービス「人脈の見える化。」',
+    description: 'Webデザインおよびフロントエンド開発を担当しました。',
+    details: [
+      'Adobe XDを用いて全31ページのWebデザインを作成',
+      'Storybookを使用してUIコンポーネントを開発・管理',
+      'TypeScriptを用いてデータのCRUD操作を実装',
+      'フロントエンドからのファイルアップロード機能を開発',
+    ],
+    achievements: [
+      'Storybook導入により、再利用可能なコンポーネント管理を効率化',
+      'TypeScriptによる堅牢なデータ処理の実装で信頼性を向上',
+    ],
+    technologies: {
+      languages: ['HTML', 'CSS', 'TypeScript'],
+      libraries: ['Storybook'],
+    },
+    image: '/images/jinmyaku.png',
+    site: '',
+  },
+];
+
+export default projects;
