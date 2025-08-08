@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config/siteConfig';
-import projects from '../../data/projects';
+import { getAllProjects } from '@/data/projects';
 import ProjectCard from './ProjectCard';
 
 export const metadata = {
@@ -7,7 +7,8 @@ export const metadata = {
   description: 'A showcase of my work and projects.',
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getAllProjects();
   const programmingProjects = projects.filter(
     (project) => project.kind === 'programming'
   );

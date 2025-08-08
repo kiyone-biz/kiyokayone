@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/projects/anatomy":{},"/projects/blog-platform":{},"/projects/ecommerce-store":{},"/projects/andgate":{},"/projects/peacedesignerfes":{},"/projects/ngo-webdesign":{},"/projects/ngo":{},"/projects/ngo-hp":{},"/projects/koujyoshigoto":{},"/projects/darwinpro":{},"/projects/tasukaru":{},"/projects/jinmyaku":{},"/projects/kiyokayone":{}},"dynamicRoutes":{"/projects/[slug]":{"fallback":null}},"notFoundRoutes":[],"preview":{"previewModeId":"6db94dfebdad4882cc0448ba49cba5a9","previewModeSigningKey":"a2d72cea7e40263d135328b7f901011c941e0fa95fad92a8c1c8b842f81acc37","previewModeEncryptionKey":"a3bd9634b064e2d25a8da8672b51bc9b1e1a56bd4743858070dd89e3c3d5d2d4"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "89aff317fdf1acc41f7a4a062c2ef6ed",
+    "previewModeSigningKey": "45c408794fd9f847240045e09b3a3241a372b79da4661060c3e44b51be113952",
+    "previewModeEncryptionKey": "f9251785a4f90c3eeb9c7968942ba98598f74b4728e8b6a2413c178c1f59695b"
+  }
+}

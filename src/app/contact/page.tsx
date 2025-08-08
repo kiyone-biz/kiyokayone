@@ -3,7 +3,7 @@ import ContactForm from '@/features/contact/ContactForm';
 
 export const metadata = {
   title: `お問い合わせ - ${siteConfig.siteTitle}`,
-  description: 'Get in touch with me.',
+  description: 'お気軽にご連絡ください。',
 };
 
 export default function Page() {

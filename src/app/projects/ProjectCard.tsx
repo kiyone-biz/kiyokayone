@@ -1,11 +1,7 @@
+import { Project } from '@/types/project';
 import Link from 'next/link';
-import projects from '../../data/projects';
 
-export default function ProjectCard({
-  project,
-}: {
-  project: (typeof projects)[number];
-}) {
+export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       key={project.slug}
