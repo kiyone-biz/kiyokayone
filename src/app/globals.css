@@ -1,11 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles */
-html,
+/* CSS Variables for consistent theming */
+:root {
+  --color-primary: 14 165 233; /* primary-500 */
+  --color-accent: 217 70 239; /* accent-500 */
+  --color-surface: 255 255 255;
+  --color-surface-dark: 23 23 23;
+  --color-text: 23 23 23;
+  --color-text-dark: 245 245 245;
+  --color-text-muted: 115 115 115;
+  --color-text-muted-dark: 163 163 163;
+  
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --color-surface: 23 23 23;
+  --color-text: 245 245 245;
+  --color-text-muted: 163 163 163;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
 body {
-  padding: 0;
   margin: 0;
-  font-family: var(--font-sans, sans-serif);
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgb(var(--color-text));
+  background-color: rgb(var(--color-surface));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selection styles */
+::selection {
+  background-color: rgb(var(--color-primary) / 0.2);
+  color: rgb(var(--color-text));
+}
+
+::-moz-selection {
+  background-color: rgb(var(--color-primary) / 0.2);
+  color: rgb(var(--color-text));
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid rgb(var(--color-primary) / 0.5);
+  outline-offset: 2px;
+}
+
+/* Custom component classes */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 shadow-medium hover:shadow-hard;
+  }
+  
+  .btn-secondary {
+    @apply bg-neutral-100 text-neutral-900 hover:bg-neutral-200 focus:ring-neutral-500 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700 shadow-soft hover:shadow-medium;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-neutral-700 hover:bg-neutral-100 focus:ring-neutral-500 dark:text-neutral-300 dark:hover:bg-neutral-800;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-neutral-800 rounded-xl shadow-soft border border-neutral-200 dark:border-neutral-700 transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-medium hover:-translate-y-1;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-accent-500;
+  }
+  
+  .glass {
+    @apply bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-white/20 dark:border-neutral-700/20;
+  }
+  
+  .surface {
+    @apply bg-white dark:bg-neutral-900;
+  }
+  
+  .surface-elevated {
+    @apply bg-neutral-50 dark:bg-neutral-800;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .transition-base {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .animate-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.6s ease-out;
+  }
+}
+
+/* Improved scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-surface));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-text-muted) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-text-muted) / 0.5);
+}
+
+/* Loading skeleton */
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.skeleton {
+  animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--color-text-muted) / 0.1) 25%,
+    rgb(var(--color-text-muted) / 0.2) 50%,
+    rgb(var(--color-text-muted) / 0.1) 75%
+  );
+  background-size: 200% 100%;
 }

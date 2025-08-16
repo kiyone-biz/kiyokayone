@@ -10,6 +10,7 @@ export interface Project {
     libraries: string[];
   };
   image: string;
+  images?: string[];
   github?: string;
   site?: string;
 }

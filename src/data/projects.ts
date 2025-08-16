@@ -6,15 +6,16 @@ export const getAllProjects = async (): Promise<Project[]> => {
       kind: 'programming',
       slug: 'todo-app',
       title: 'ポートフォリオ「Todo App」',
-      description: 'ポートフォリオ用アプリを作成しました。',
+      description:
+        'ポートフォリオ用に開発したTodoアプリです。短時間での開発効率と、モダンなフロントエンド技術の活用を重視しています。',
       details: [
-        'AI(Claude Code)を使用して1時間弱で完成',
-        '主流のNext.js App Routerを使用した構成',
-        'コンポーネント設計を意識して再利用性の高い構成を実現',
+        'AI(Claude Code)を使用して1時間程度で完成',
+        'Next.js App Router を使用した主流の構成',
+        'コンポーネント設計 を意識し、再利用性の高い構成を実現',
         'TypeScriptを用いた型安全な開発',
       ],
       achievements: [
-        'Next.js App Routerの導入により、柔軟なルーティングとメタデータ管理を実現',
+        'Next.js App Router による柔軟なルーティングと メタデータ管理',
         'SEOを意識したページ構成・メタデータ設計',
         'Tailwind CSSによる迅速かつ一貫性のあるスタイリング',
       ],
@@ -22,7 +23,8 @@ export const getAllProjects = async (): Promise<Project[]> => {
         languages: ['Claude Code', 'React', 'Next.js', 'TypeScript'],
         libraries: ['Tailwind CSS'],
       },
-      image: '/images/todo-app.png',
+      image: '/images/todo-app1.png',
+      images: ['/images/todo-app1.png', '/images/todo-app2.png'],
       site: 'https://todo-app-eight-rho-27.vercel.app/',
     },
     {

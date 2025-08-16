@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "C:\\c\\Users\\kiyok\\study"
+    ],
+    "allow": [
+      "Bash(npm run dev:*)"
+    ]
+  }
+}
