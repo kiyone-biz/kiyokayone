@@ -4,6 +4,29 @@ export const getAllProjects = async (): Promise<Project[]> => {
   return [
     {
       kind: 'programming',
+      slug: 'todo-app',
+      title: 'ポートフォリオ「Todo App」',
+      description: 'ポートフォリオ用アプリを作成しました。',
+      details: [
+        'AI(Claude Code)を使用して1時間弱で完成',
+        '主流のNext.js App Routerを使用した構成',
+        'コンポーネント設計を意識して再利用性の高い構成を実現',
+        'TypeScriptを用いた型安全な開発',
+      ],
+      achievements: [
+        'Next.js App Routerの導入により、柔軟なルーティングとメタデータ管理を実現',
+        'SEOを意識したページ構成・メタデータ設計',
+        'Tailwind CSSによる迅速かつ一貫性のあるスタイリング',
+      ],
+      technologies: {
+        languages: ['Claude Code', 'React', 'Next.js', 'TypeScript'],
+        libraries: ['Tailwind CSS'],
+      },
+      image: '/images/todo-app.png',
+      site: 'https://todo-app-eight-rho-27.vercel.app/',
+    },
+    {
+      kind: 'programming',
       slug: 'kiyokayone',
       title: 'ポートフォリオサイト「Kiyoka Yone」',
       description:
